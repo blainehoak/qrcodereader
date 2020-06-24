@@ -20,4 +20,11 @@ For OpenCV, you can either use the following command to get it through pip:
 
 Or you can compile from source (takes ~1-2 hours) using the instructions [here](https://pimylifeup.com/raspberry-pi-opencv/).
 
+To use `barcode_scanner_image` run:
+
+`python3 barcode_scanner_image qrcodetest.png`
+
+To use `barcode_scanner_video` run:
+
+`python3 barcode_scanner_video`
 
