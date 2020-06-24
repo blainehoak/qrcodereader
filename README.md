@@ -7,7 +7,7 @@ I followed [this](https://www.pyimagesearch.com/2018/05/21/an-opencv-barcode-and
 Install the following:
 
 `sudo apt-get install libzbar0`
-
+                                                            
 `pip3 install pyzbar`
 
 `pip3 install imutils`
@@ -22,7 +22,7 @@ Or you can compile from source (takes ~1-2 hours) using the instructions [here](
 
 To use `barcode_scanner_image` run:
 
-`python3 barcode_scanner_image qrcodetest.png`
+`python3 barcode_scanner_image --image qrcodetest.png`
 
 To use `barcode_scanner_video` run:
 
