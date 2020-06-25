@@ -22,8 +22,8 @@ csv = open(args["output"], "w")
 found = set()
 # loop over the frames from the video stream
 
-tdelta = datetime.timedelta()
-t0 = datetime.datetime.now()
+#tdelta = datetime.timedelta()
+#t0 = datetime.datetime.now()
 while True:
     # grab the frame from the threaded video stream and resize it to
     # have a maximum width of 400 pixels
@@ -53,17 +53,17 @@ while True:
             csv.write("{},{}\n".format(datetime.datetime.now(), barcodeData))
             csv.flush()
             found.add(barcodeData)
-            
         
     # show the output frame
     cv2.imshow("Barcode Scanner", frame)
     key = cv2.waitKey(1) & 0xFF
     
-    t1 = datetime.datetime.now()
-    tdelta = t1 - t0
+    #t1 = datetime.datetime.now()
+    #tdelta = t1 - t0
     # if the `q` key was pressed, break from the loop
-    print(tdelta.total_seconds())
-    if tdelta.total_seconds() >= 30:
+    #print(tdelta.total_seconds())
+    #if tdelta.total_seconds() >= 30:
+    if len(found) > 0:
         break
         
 # close the output CSV file do a bit of cleanup
